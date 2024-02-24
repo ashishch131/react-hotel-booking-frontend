@@ -1,0 +1,132 @@
+.hotelConatianer {
+    display: flex;
+  margin-top: 20px;
+  display: flex;
+align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.hotelWrapper {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.hotelTitleItem {
+  display: flex;
+  justify-content: space-between;
+}
+.hotelTitle {
+  font-size: 20px;
+  font-weight: bold;
+}
+.hotelReserve {
+  background-color: #0167b7;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+.hotelLocation {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+}
+.hotelAddress {
+  color: #0167b7;
+}
+.hotelOffer {
+  color: #239b56;
+  font-weight: 500;
+}
+
+.hotelImg {
+  width: 335px;
+}
+.hotelImages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.hotelBottom{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.hotelBottomLeft{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.hotelBottomTitle{
+    font-size: 20px;
+    font-weight: bold;
+}
+.hotelDesc{
+    font-size: 14px;
+
+}
+.hotelBottomRight{
+    flex: 1;
+    padding: 20px;
+    background-color: #E9F2FF;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bottomRightTitle{
+    font-size: 16px;
+    font-weight: bold;
+}
+.bottomRightDesc{
+    font-size: 14px;
+}
+.hotelPrice{
+    font-size: 20px;
+}
+.slider{
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.466);
+  z-index: 999;
+}
+.sliderWrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sliderImg{
+  width: 80%;
+  height: 80vh;
+}
+.close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: lightgray;
+  font-size: 30px !important;
+  font-weight: bold;
+  cursor: pointer;
+}
+.arrow{
+  margin: 20px;
+  font-size: 30px !important;
+  font-weight: bold;
+  color: lightgray;
+  cursor: pointer;
+}
