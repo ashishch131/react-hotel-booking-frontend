@@ -1,0 +1,67 @@
+.reserve{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+.reserveContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #ECF0F1;
+    color: black;
+    padding: 20px;
+    position: relative;
+}
+.btnClose{
+ position: absolute;
+ top: 0;
+ right: 0;
+ cursor: pointer;
+ margin-bottom: 20px;
+}
+.InfoTitle{
+    font-size: 20px;
+    font-weight: 500;
+}
+.roomInfo{
+    display: flex;
+   margin-bottom: 20px;
+   gap: 40px;
+   align-items: center;
+   border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+.roomInfoLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.roomTitle{
+    font-weight: 500;
+}
+.roomInfoRight{
+display: flex;
+flex-wrap: wrap;
+gap: 5px;
+font-size: 14px;
+}
+.room{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+   
+}
+.roomReserve{
+    padding: 10px;
+    background-color: #3498DB;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

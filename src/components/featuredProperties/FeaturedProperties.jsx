@@ -1,78 +1,34 @@
+import useFetch from "../../hooks/useFetch";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
+  const { data, loading, error } = useFetch(
+    "http://localhost:5000/api/hotels?featured=true"
+  );
   return (
     <div className="fp">
-      <div className="fpItems">
+      {loading ? "Loading..." : 
+        data.map((item) => (
+        
+      <div className="fpItems" key={item._id}>
         <img
-          src="https://images.pexels.com/photos/1001965/pexels-photo-1001965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          src={item.photos[0]}
           alt=""
           className="fpImg"
         />
-        <span className="fpName">Shangri-la-eros</span>
-        <span className="fpCity">New Delhi</span>
-        <span className="fpPrice">Strarting Price Rs.12000</span>
-        <div className="fpRating">
-          <button className="fpRatingBtn">8.9</button>
+        <span className="fpName">{item.name} </span>
+        <span className="fpCity">{item.city} </span>
+            <span className="fpPrice">Strarting Price Rs.{item.cheapestPrice}</span>
+              {item.rating && 
+            <div className="fpRating">
+          <button className="fpRatingBtn">{item.rating} </button>
           <span className="fpRatingText">Exellent</span>
         </div>
+              }
           </div>
-          <div className="fpItems">
-        <img
-          src="https://images.pexels.com/photos/161758/governor-s-mansion-montgomery-alabama-grand-staircase-161758.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt=""
-          className="fpImg"
-        />
-        <span className="fpName">Taj Palace</span>
-        <span className="fpCity">New Delhi</span>
-        <span className="fpPrice">Strarting Price Rs.18000</span>
-        <div className="fpRating">
-          <button className="fpRatingBtn">8.9</button>
-          <span className="fpRatingText">Exellent</span>
-        </div>
-          </div>
-          <div className="fpItems">
-        <img
-          src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt=""
-          className="fpImg"
-        />
-        <span className="fpName">Radison Blue</span>
-        <span className="fpCity">Noida</span>
-        <span className="fpPrice">Strarting Price Rs.12000</span>
-        <div className="fpRating">
-          <button className="fpRatingBtn">8.9</button>
-          <span className="fpRatingText">Exellent</span>
-        </div>
-          </div>
-          <div className="fpItems">
-        <img
-          src="https://images.pexels.com/photos/1579253/pexels-photo-1579253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt=""
-          className="fpImg"
-        />
-        <span className="fpName">Crown Plaza </span>
-        <span className="fpCity">Noida</span>
-        <span className="fpPrice">Strarting Price Rs.8000</span>
-        <div className="fpRating">
-          <button className="fpRatingBtn">8.5</button>
-          <span className="fpRatingText">Exellent</span>
-        </div>
-          </div>
-          <div className="fpItems">
-        <img
-          src="https://images.pexels.com/photos/1055056/pexels-photo-1055056.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          alt=""
-          className="fpImg"
-        />
-        <span className="fpName">Jaypee Green Golf</span>
-        <span className="fpCity">New Delhi</span>
-        <span className="fpPrice">Strarting Price Rs.12000</span>
-        <div className="fpRating">
-          <button className="fpRatingBtn">7.5</button>
-          <span className="fpRatingText">Good</span>
-        </div>
-      </div>
+      ))
+      }
+      
     </div>
   );
 };
